@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF4F6BFB262CD07E004927E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6BFA262CD07E004927E8 /* main.m */; };
+		BF4F6C03262CD0A0004927E8 /* KeyGeneration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C02262CD0A0004927E8 /* KeyGeneration.cpp */; };
+		BF4F6C0B262CD148004927E8 /* platform-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C07262CD148004927E8 /* platform-specific.inc */; };
+		BF4F6C0C262CD148004927E8 /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C09262CD148004927E8 /* uECC.c */; };
+		BF4F6C0F262CD164004927E8 /* curve-specific.inc in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C0E262CD164004927E8 /* curve-specific.inc */; };
+		BF4F6C1C262CD1FB004927E8 /* asm_avr.inc in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C11262CD1FA004927E8 /* asm_avr.inc */; };
+		BF4F6C1D262CD1FB004927E8 /* asm_avr_mult_square.inc in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C12262CD1FA004927E8 /* asm_avr_mult_square.inc */; };
+		BF4F6C1E262CD1FB004927E8 /* asm_arm_mult_square.inc in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C13262CD1FA004927E8 /* asm_arm_mult_square.inc */; };
+		BF4F6C1F262CD1FB004927E8 /* asm_arm.inc in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C14262CD1FA004927E8 /* asm_arm.inc */; };
+		BF4F6C20262CD1FB004927E8 /* asm_arm_mult_square_umaal.inc in Sources */ = {isa = PBXBuildFile; fileRef = BF4F6C16262CD1FA004927E8 /* asm_arm_mult_square_umaal.inc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +32,24 @@
 
 /* Begin PBXFileReference section */
 		BF4F6BF7262CD07E004927E8 /* KeyGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeyGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF4F6BFA262CD07E004927E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF4F6C02262CD0A0004927E8 /* KeyGeneration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyGeneration.cpp; sourceTree = "<group>"; };
+		BF4F6C06262CD148004927E8 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		BF4F6C07262CD148004927E8 /* platform-specific.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "platform-specific.inc"; sourceTree = "<group>"; };
+		BF4F6C08262CD148004927E8 /* uECC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uECC.h; sourceTree = "<group>"; };
+		BF4F6C09262CD148004927E8 /* uECC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uECC.c; sourceTree = "<group>"; };
+		BF4F6C0A262CD148004927E8 /* uECC_vli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uECC_vli.h; sourceTree = "<group>"; };
+		BF4F6C0E262CD164004927E8 /* curve-specific.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = "curve-specific.inc"; sourceTree = "<group>"; };
+		BF4F6C11262CD1FA004927E8 /* asm_avr.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_avr.inc; sourceTree = "<group>"; };
+		BF4F6C12262CD1FA004927E8 /* asm_avr_mult_square.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_avr_mult_square.inc; sourceTree = "<group>"; };
+		BF4F6C13262CD1FA004927E8 /* asm_arm_mult_square.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_arm_mult_square.inc; sourceTree = "<group>"; };
+		BF4F6C14262CD1FA004927E8 /* asm_arm.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_arm.inc; sourceTree = "<group>"; };
+		BF4F6C15262CD1FA004927E8 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		BF4F6C16262CD1FA004927E8 /* asm_arm_mult_square_umaal.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = asm_arm_mult_square_umaal.inc; sourceTree = "<group>"; };
+		BF4F6C17262CD1FA004927E8 /* emk_project.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = emk_project.py; sourceTree = "<group>"; };
+		BF4F6C18262CD1FA004927E8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		BF4F6C19262CD1FA004927E8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BF4F6C1A262CD1FB004927E8 /* test */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test; sourceTree = "<group>"; };
+		BF4F6C1B262CD1FB004927E8 /* emk_rules.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = emk_rules.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +82,24 @@
 		BF4F6BF9262CD07E004927E8 /* KeyGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				BF4F6BFA262CD07E004927E8 /* main.m */,
+				BF4F6C02262CD0A0004927E8 /* KeyGeneration.cpp */,
+				BF4F6C16262CD1FA004927E8 /* asm_arm_mult_square_umaal.inc */,
+				BF4F6C13262CD1FA004927E8 /* asm_arm_mult_square.inc */,
+				BF4F6C14262CD1FA004927E8 /* asm_arm.inc */,
+				BF4F6C12262CD1FA004927E8 /* asm_avr_mult_square.inc */,
+				BF4F6C11262CD1FA004927E8 /* asm_avr.inc */,
+				BF4F6C17262CD1FA004927E8 /* emk_project.py */,
+				BF4F6C1B262CD1FB004927E8 /* emk_rules.py */,
+				BF4F6C18262CD1FA004927E8 /* LICENSE.txt */,
+				BF4F6C19262CD1FA004927E8 /* README.md */,
+				BF4F6C15262CD1FA004927E8 /* scripts */,
+				BF4F6C1A262CD1FB004927E8 /* test */,
+				BF4F6C0E262CD164004927E8 /* curve-specific.inc */,
+				BF4F6C07262CD148004927E8 /* platform-specific.inc */,
+				BF4F6C06262CD148004927E8 /* types.h */,
+				BF4F6C0A262CD148004927E8 /* uECC_vli.h */,
+				BF4F6C09262CD148004927E8 /* uECC.c */,
+				BF4F6C08262CD148004927E8 /* uECC.h */,
 			);
 			path = KeyGenerator;
 			sourceTree = "<group>";
@@ -118,7 +160,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4F6BFB262CD07E004927E8 /* main.m in Sources */,
+				BF4F6C1E262CD1FB004927E8 /* asm_arm_mult_square.inc in Sources */,
+				BF4F6C03262CD0A0004927E8 /* KeyGeneration.cpp in Sources */,
+				BF4F6C1D262CD1FB004927E8 /* asm_avr_mult_square.inc in Sources */,
+				BF4F6C1F262CD1FB004927E8 /* asm_arm.inc in Sources */,
+				BF4F6C20262CD1FB004927E8 /* asm_arm_mult_square_umaal.inc in Sources */,
+				BF4F6C0C262CD148004927E8 /* uECC.c in Sources */,
+				BF4F6C1C262CD1FB004927E8 /* asm_avr.inc in Sources */,
+				BF4F6C0F262CD164004927E8 /* curve-specific.inc in Sources */,
+				BF4F6C0B262CD148004927E8 /* platform-specific.inc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
