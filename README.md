@@ -1,10 +1,11 @@
 # Generate secp public key with private key
 
 ## Technology C and Python.
+   We want to use the KeyGeneration.cpp module from KeyGenerator
 
 ## To launch after git clone
 
-  cd KeyGeneration
+  cd KeyGenerator
   git submodule init
   git submodule update
 
