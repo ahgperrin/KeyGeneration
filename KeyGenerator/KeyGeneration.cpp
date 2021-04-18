@@ -46,23 +46,23 @@ class Key
     }
 };
 
-//namespace py = pybind11;
+namespace py = pybind11;
 
-//PYBIND11_MODULE(KeyGeneration, hab)
-//{
-//    hab.doc() = "KeyGeneration 1.0";
-//    hab.def("getVersion", &getVersion, "Version Getter");
-//    py::class_<KeyGeneration>(hab, "GenerateKey")
-//        .def(py::init())
-//        .def("initialize", &KeyGeneration::initialize)
-//        .def("getPrivateKey", &KeyGeneration::getPrivateKey)
-//        .def("getPublicKey", &KeyGeneration::getPublicKey);
-//}
-
-int main(int argc, const char * argv[]) {
-    Key testKey;
-    testKey.initialize("4b8e29b9b0dddd58a709edba7d6df6c07ebdaf5653e325114bc5318c238f87f0");
-    cout << "Private key is: "<<testKey.getPrivateKey()<<endl;
-    cout << "Public key is: "<<testKey.getPublicKey()<<endl;
-    return 0;
+PYBIND11_MODULE(KeyGeneration, hab)
+{
+    hab.doc() = "KeyGeneration 1.0";
+    hab.def("getVersion", &getVersion, "Version Getter");
+    py::class_<KeyGeneration>(hab, "GenerateKey")
+        .def(py::init())
+        .def("initialize", &KeyGeneration::initialize)
+        .def("getPrivateKey", &KeyGeneration::getPrivateKey)
+        .def("getPublicKey", &KeyGeneration::getPublicKey);
 }
+
+//int main(int argc, const char * argv[]) {
+ //   Key testKey;
+//    testKey.initialize("4b8e29b9b0dddd58a709edba7d6df6c07ebdaf5653e325114bc5318c238f87f0");
+//    cout << "Private key is: "<<testKey.getPrivateKey()<<endl;
+//    cout << "Public key is: "<<testKey.getPublicKey()<<endl;
+//    return 0;
+//}
